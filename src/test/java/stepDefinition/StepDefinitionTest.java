@@ -13,22 +13,23 @@ public class StepDefinitionTest {
 
     @Given("^User is on NetiBanking lading page$")
     public void user_is_on_netibanking_lading_page() throws Throwable {
-        System.out.println("Given");
+        System.out.println("Navigate on URL");
     }
 
-    @When("^User login into appication with username and password$")
-    public void user_login_into_appication_with_username_and_password() throws Throwable {
-        System.out.println("When");
+    @When("^User login into appication with \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void user_login_into_appication_with_something_and_something(String strArg1, String strArg2) throws Throwable {
+        System.out.println("Username: " + strArg1);
+        System.out.println("Passoword: " + strArg2);
     }
 
     @Then("^Home page is populated$")
     public void home_page_is_populated() throws Throwable {
-        System.out.println("Then");
+        System.out.println("Validate Home Page");
     }
 
-    @And("^Cards are displayed$")
-    public void cards_are_displayed() throws Throwable {
-        System.out.println("And");
+    @And("^Cards are displayed \"([^\"]*)\"$")
+    public void cards_are_displayed_something(String strArg1) throws Throwable {
+        System.out.println("Validation status: " + strArg1);
     }
 
 }
